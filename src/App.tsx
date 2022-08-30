@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { AppWrapper, FieldWrapper, MessageWrapper, Button } from './styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+        <h2>Birthday Countdown App</h2>
+      <FieldWrapper>
+        <label htmlFor="name">name:</label>
+        <input type="text" />
+      </FieldWrapper>
+      <FieldWrapper>
+        <label htmlFor="name">next birthday:</label>
+        <input type="text" />
+      </FieldWrapper>
+      <Button>calculate</Button>
+      <MessageWrapper>
+        <div>Eliz, it's your birthday in...</div>
+        <div>birthday calculator</div>
+      </MessageWrapper>
+    </AppWrapper>
   );
 }
 
