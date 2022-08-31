@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { AppWrapper, FieldWrapper, MessageWrapper, Button } from './styles';
+import { AppWrapper, FieldWrapper, MessageWrapper, Button, MessageHeading, MessageDiv, Input } from './styles';
 
 function App() {
   const [showMessage, setShowMessage] = useState(false);
@@ -46,10 +46,10 @@ function App() {
 
   return (
     <AppWrapper>
-        <h2>Birthday Countdown App</h2>
+        <h2>Birthday Countdown Timer</h2>
       <FieldWrapper>
         <label htmlFor="name">name:</label>
-        <input 
+        <Input
           type="text"
           onChange={sortName}
           autoComplete="off" 
@@ -57,7 +57,7 @@ function App() {
       </FieldWrapper>
       <FieldWrapper>
         <label htmlFor="name">next birthday:</label>
-        <input 
+        <Input 
           type="text" 
           onChange={sortBirthdate}
           autoComplete="off"
@@ -66,11 +66,11 @@ function App() {
       <Button onClick={() => setShowMessage(true)}>calculate</Button>
       {showMessage &&
         <MessageWrapper>
-          <div>{name}, it's your birthday in...</div>
-          <div>{days} days,</div>
-          <div>{hours} hours,</div>
-          <div>{minutes} minutes,</div>
-          <div>and {seconds} seconds.</div>
+          <MessageHeading>{name}, it's your birthday in...</MessageHeading>
+          <MessageDiv>{days} days,</MessageDiv>
+          <MessageDiv>{hours} hours,</MessageDiv>
+          <MessageDiv>{minutes} minutes,</MessageDiv>
+          <MessageDiv>and {seconds} seconds.</MessageDiv>
         </MessageWrapper>
       }
     </AppWrapper>

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const AppWrapper = styled.div`
-  background: #666;
-  color: white;
+  background: #959C00;
+  color:  white;
   font-size: 25px; 
   text-align: center;
   width: 90%;
@@ -24,7 +24,7 @@ export const FieldWrapper = styled.div`
 export const Button = styled.button`
   margin: 50px 0;
   padding: 15px;
-  background: green;
+  background: #7425B2;
   color: white;
   border: 0;
   border-radius: 10px;
@@ -32,10 +32,27 @@ export const Button = styled.button`
 `
 
 export const MessageWrapper = styled.div`
-  padding-top: 20px;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 300px;
+  width: 400px;
   margin: 0 auto; 
+  background: #f47736;
+`
+
+export const MessageHeading = styled.h2`
+  color:#E6D5F4;
+`
+
+export const MessageDiv = styled.h3`
+  color: #E6D5F4; 
+`
+
+export const Input = styled.input`
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+ 
 `
